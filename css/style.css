@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+    
+    /* (paragraphs) */
+    --TransparentWhite: hsla(0, 0%, 100%, 0.75);
+    
+    /* (background, headings, buttons) */
+    --VeryLightGray: hsl(0, 0%, 95%);
+
+    --font-BigShouldersDisplay: 'Big Shoulders Display', cursive;
+    --font-LexendDeca: 'Lexend Deca', sans-serif;
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-LexendDeca);
+    font-size: 15px;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* ITEMS */
+.items{
+    width: 15rem;
+    padding: 2rem;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* flex: 1 1 15rem; */
+}
+
+.items__content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.items__title{
+    font-size: 2.2rem;
+    font-family: var(--font-BigShouldersDisplay);
+    text-transform: uppercase;
+    color: var(--VeryLightGray);
+}
+
+.items__paragraph{
+    color: var(--TransparentWhite);
+    line-height: 1.5;
+}
+
+.items:first-child{
+    background-color: var(--BrightOrange);
+}
+
+.items:nth-child(2){
+    background-color: var(--DarkCyan);
+}
+
+.items:last-child{
+    background-color: var(--VeryDarkCyan);
+}
+
+/* ITEMS BUTTON */
+.items__btn{
+    width: max-content;    
+    padding: .625rem 1rem;
+    border-radius: 2rem;
+    border: 2px solid var(--VeryLightGray);
+    background-color: var(--VeryLightGray);
+    transition-duration: .3s;
+}
+
+.items:first-child .items__btn{
+    color: var(--BrightOrange);
+}
+
+.items:nth-child(2) .items__btn{
+    color: var(--DarkCyan);
+}
+
+.items:last-child .items__btn{
+    color: var(--VeryDarkCyan);
+}
+
+.items .items__btn:hover{
+    border: 2px solid var(--VeryLightGray);
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 576px){
+    .container{
+        width: 90%;
+    }
+
+    .items{
+        width: 90%;
+        min-height: 50vh;
+    }
+
+}
+
+
